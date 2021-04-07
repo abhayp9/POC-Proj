@@ -1,0 +1,57 @@
+<div class="grid-container">
+  <mat-grid-list cols="1" rowHeight="80px">
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <!-- <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button> -->
+            <!-- <mat-menu class="my-menu" #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu> -->
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+           <div><mat-icon>build</mat-icon></div> <div class="icontext"><h2>Product Hub </h2></div>
+        </mat-card-content>
+      </mat-card>
+      
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-card class="titlecard">
+        <mat-card-header>
+          <mat-card-title>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="title-card-content">
+          <div class="logo">CITI</div>
+          <div class="title">Retail Banking Products</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <mat-card class="prodcard">
+        <mat-card-header>
+        </mat-card-header>
+        <mat-card-content class="prod-card-content">
+          <div><img class="val" mat-card-image src="../../assets/notebook.png" alt="valprop"></div>
+          <div><img class="feat" mat-card-image src="../../assets/barcode.png" alt="features"></div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="maintcard">
+        <mat-card-header>
+        </mat-card-header>
+        <mat-card-content class="maint-card-content">
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

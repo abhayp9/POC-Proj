@@ -1,0 +1,89 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+.titlecard {
+position:absolute;
+top: -10px;
+width: 97.5%;
+height: auto;
+}
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: black;
+}
+
+.dashboard-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-top: -15px;
+  
+  color: black;
+}
+.logo{
+  color: blue;
+  font-size: 50px;
+  font-weight: bold;
+
+}
+.title{
+  margin-left: 10px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+.title-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  // margin-top: 10px;
+}
+.prod-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  // margin-top: 10px;
+}
+.prodcard{
+  margin-left: -310px;
+  margin-top: -100px;
+  height: 60%;
+  width: 50%
+}
+.maint-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  // margin-top: 10px;
+}
+.mat-card {
+  background: white;
+  color: #fff;
+}
+.icontext {
+  color: gray;
+  margin-top: -5px;
+  margin-left: 10px;
+}
+.mat-grid-tile.title-card{
+  top: 25px;
+}
+.val{
+margin-left: 1px;
+padding-top: 10px;
+height: 140px;
+width: 140px;
+}
+.feat{
+  margin-left: 30px;
+  padding-top: 20px;
+  height: 160px;
+  width: 160px;
+ 
+}
