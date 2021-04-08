@@ -1,0 +1,179 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  width: 98%;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+.titlecard {
+position:absolute;
+top: -10px;
+width: 98%;
+height: auto;
+margin-left: -5px;
+}
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: black;
+}
+
+.dashboard-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-top: -15px;
+  
+  color: black;
+}
+.logo{
+  color: blue;
+  font-size: 50px;
+  font-weight: bold;
+
+}
+.title{
+  margin-left: 10px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  height: 100px;
+}
+.title-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  height: 100%;
+  // margin-top: 10px;
+}
+.cards {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 98%;
+  color: black;
+}
+
+.prod-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 30px;
+  
+  // margin-top: 10px;
+}
+.lookup{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+ margin-right: 10px;
+}
+.prodcard{
+
+  vertical-align: middle;
+  margin-right: 30px;
+  width: 22%;
+  
+ 
+}
+.mat-card{
+  color: black !important;
+  font-weight: bold;
+}
+.maintcard{
+//   margin-left: 300px;
+//   margin-top: -90px;
+//   height: 60%;
+  width: 78%
+}
+
+.maint-card-content {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: 50px;
+}
+.mat-card {
+  background: white;
+  color: #fff;
+}
+.icontext {
+  color: gray;
+  margin-top: -5px;
+  margin-left: 10px;
+}
+.mat-grid-tile.title-card{
+  top: 25px;
+}
+.val{
+margin-left: -10px;
+padding-top: 10px;
+height: 120px;
+width: 120px;
+
+
+}
+.feat{
+  // margin-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 140px;
+  width: 140px;
+ 
+}
+.mat-card-subtitle{
+  color: black;
+}
+.prop {
+  margin-right: 20px;
+  padding-top: 20px;
+  width: fit-content;
+  
+}
+.feature{
+  width: fit-content;
+}
+
+.proptext{
+  margin-left: 0px;
+  margin-top: -10px !important;
+}
+.feattext{
+  margin-top: -25px !important;
+  margin-left: 30px;
+}
+.icon1{
+width: 75px;
+height: 75px;
+margin-left: 30px;
+padding-bottom: 10px
+ 
+}
+.AO{
+  padding-bottom: 10px;
+  margin-right: 20px;
+}
+.mat-card>:first-child, .mat-card-content>:first-child {
+  margin-top: 0;
+}
+.mat-raised-button{
+  color: black;
+  background-color: white;
+ height: 20%;
+ margin-top: -75px !important;}
+.mat-dialog-actions {
+
+  &[align='end'] {
+    
+    justify-content: flex-end;
+  }
+
+  &[align='center'] {
+    justify-content: center;
+  }
+}
