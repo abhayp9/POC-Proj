@@ -42,10 +42,12 @@ margin-left: -5px;
   color: red;
   font-size: 20px;
   font-weight: bold;
+  height: 100px;
 }
 .title-card-content {
   display: inline-flex;
   vertical-align: middle;
+  height: 100%;
   // margin-top: 10px;
 }
 .cards {
@@ -60,6 +62,7 @@ margin-left: -5px;
 .prod-card-content {
   display: inline-flex;
   vertical-align: middle;
+  margin-left: 30px;
   
   // margin-top: 10px;
 }
@@ -73,13 +76,14 @@ margin-left: -5px;
 .prodcard{
 
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 30px;
   width: 22%;
   
  
 }
 .mat-card{
   color: black !important;
+  font-weight: bold;
 }
 .maintcard{
 //   margin-left: 300px;
@@ -91,7 +95,8 @@ margin-left: -5px;
 .maint-card-content {
   display: inline-flex;
   vertical-align: middle;
-  // margin-top: 10px;
+  margin-right: 10px;
+  margin-top: 50px;
 }
 .mat-card {
   background: white;
@@ -108,16 +113,17 @@ margin-left: -5px;
 .val{
 margin-left: -10px;
 padding-top: 10px;
-height: 140px;
-width: 140px;
+height: 120px;
+width: 120px;
 
 
 }
 .feat{
   // margin-left: 30px;
-  padding-top: 20px;
-  height: 160px;
-  width: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 140px;
+  width: 140px;
  
 }
 .mat-card-subtitle{
@@ -132,16 +138,26 @@ width: 140px;
 .feature{
   width: fit-content;
 }
-.card-header{
-  color: black;
-  background: white;
-  margin-left: 0px;
-}
+
 .proptext{
   margin-left: 0px;
   margin-top: -10px !important;
 }
 .feattext{
-  margin-top: -30px !important;
+  margin-top: -25px !important;
   margin-left: 30px;
+}
+.icon1{
+width: 75px;
+height: 75px;
+margin-left: 30px;
+padding-bottom: 10px
+ 
+}
+.AO{
+  padding-bottom: 10px;
+  margin-right: 20px;
+}
+.mat-card>:first-child, .mat-card-content>:first-child {
+  margin-top: 0;
 }
