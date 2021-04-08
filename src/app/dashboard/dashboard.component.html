@@ -2,20 +2,14 @@
   <mat-grid-list cols="1" rowHeight="80px">
     <mat-grid-tile>
       <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            <!-- <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button> -->
-            <!-- <mat-menu class="my-menu" #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu> -->
-          </mat-card-title>
-        </mat-card-header>
         <mat-card-content class="dashboard-card-content">
            <div><mat-icon>build</mat-icon></div> <div class="icontext"><h2>Product Hub </h2></div>
-        </mat-card-content>
+           
+        </mat-card-content >
+        <mat-card-actions align="end">
+          
+          <button mat-raised-button> <mat-icon>add</mat-icon>New Feature</button>
+        </mat-card-actions>
       </mat-card>
       
     </mat-grid-tile>
@@ -38,6 +32,7 @@
         <mat-card class="prodcard">
           Product Lookup
           <br>
+          <br>
           <mat-card-content class="prod-card-content">
             <mat-card class="prop">
             <img class="val" mat-card-image src="./assets/a.JPG" alt="valprop"> 
@@ -50,6 +45,7 @@
           </mat-card-content>
         </mat-card>
         <mat-card class="maintcard">
+          Segment Maintenance
           <mat-card-header>
           </mat-card-header>
           <mat-card-content class="maint-card-content">

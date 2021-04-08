@@ -161,3 +161,19 @@ padding-bottom: 10px
 .mat-card>:first-child, .mat-card-content>:first-child {
   margin-top: 0;
 }
+.mat-raised-button{
+  color: black;
+  background-color: white;
+ height: 20%;
+ margin-top: -75px !important;}
+.mat-dialog-actions {
+
+  &[align='end'] {
+    
+    justify-content: flex-end;
+  }
+
+  &[align='center'] {
+    justify-content: center;
+  }
+}
