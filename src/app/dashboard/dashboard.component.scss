@@ -4,6 +4,7 @@
 
 .dashboard-card {
   position: absolute;
+  width: 98%;
   top: 15px;
   left: 15px;
   right: 15px;
@@ -12,8 +13,9 @@
 .titlecard {
 position:absolute;
 top: -10px;
-width: 97.5%;
+width: 98%;
 height: auto;
+margin-left: -5px;
 }
 .more-button {
   position: absolute;
@@ -46,17 +48,43 @@ height: auto;
   vertical-align: middle;
   // margin-top: 10px;
 }
+.cards {
+  display: inline-flex;
+  // vertical-align: middle;
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 98%;
+  color: black;
+}
+
 .prod-card-content {
   display: inline-flex;
   vertical-align: middle;
+  
   // margin-top: 10px;
 }
-.prodcard{
-  margin-left: -310px;
-  margin-top: -100px;
-  height: 60%;
-  width: 50%
+.lookup{
+  display: inline-flex;
+  vertical-align: middle;
+
+ margin-right: 10px;
 }
+.prodcard{
+  margin-right: 20px;
+  width: 35%;
+  
+ 
+}
+.mat-card{
+  color: black !important;
+}
+.maintcard{
+//   margin-left: 300px;
+//   margin-top: -90px;
+//   height: 60%;
+  width: 75%
+}
+
 .maint-card-content {
   display: inline-flex;
   vertical-align: middle;
@@ -75,24 +103,37 @@ height: auto;
   top: 25px;
 }
 .val{
-margin-left: 1px;
+margin-left: -10px;
 padding-top: 10px;
 height: 140px;
 width: 140px;
 
+
 }
 .feat{
-  margin-left: 30px;
+  // margin-left: 30px;
   padding-top: 20px;
   height: 160px;
   width: 160px;
  
 }
-.imgtxt2{
+.mat-card-subtitle{
   color: black;
-padding-top: -10px;
 }
-.imgtxt1{
+.prop {
+  margin-right: 20px;
+  padding-top: 20px;
+  
+}
+.card-header{
   color: black;
-
+  background: white;
+  margin-left: 0px;
+}
+.proptext{
+  margin-left: 0px;
+}
+.feattext{
+  margin-top: -20px !important;
+  margin-left: 20px;
 }
