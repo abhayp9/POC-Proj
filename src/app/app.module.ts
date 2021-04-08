@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table'  
 import { MatButtonModule } from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
@@ -34,7 +36,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatButtonModule,
     LayoutModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
