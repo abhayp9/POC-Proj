@@ -50,7 +50,7 @@ margin-left: -5px;
 }
 .cards {
   display: inline-flex;
-  // vertical-align: middle;
+  vertical-align: middle;
   margin-top: 10px;
   margin-left: 15px;
   width: 98%;
@@ -64,14 +64,17 @@ margin-left: -5px;
   // margin-top: 10px;
 }
 .lookup{
-  display: inline-flex;
-  vertical-align: middle;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 
  margin-right: 10px;
 }
 .prodcard{
+
+  vertical-align: middle;
   margin-right: 20px;
-  width: 35%;
+  width: 22%;
   
  
 }
@@ -82,7 +85,7 @@ margin-left: -5px;
 //   margin-left: 300px;
 //   margin-top: -90px;
 //   height: 60%;
-  width: 75%
+  width: 78%
 }
 
 .maint-card-content {
@@ -123,7 +126,11 @@ width: 140px;
 .prop {
   margin-right: 20px;
   padding-top: 20px;
+  width: fit-content;
   
+}
+.feature{
+  width: fit-content;
 }
 .card-header{
   color: black;
