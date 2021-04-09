@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 import {
   FormControl,
   FormGroup,
 } from '@angular/forms';
+import { ProductComponent  } from '../product/product.component'  
 @Component({
   selector: 'app-value-details',
   templateUrl: './value-details.component.html',
@@ -36,7 +38,7 @@ export class ValueDetailsComponent implements OnInit {
 
     
   });
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -52,5 +54,14 @@ export class ValueDetailsComponent implements OnInit {
 
   prevStep() {
     this.step--;
+  }
+  openFormDialog() {
+    const dialogRef = this.dialog.open(ProductComponent, {
+      width: 'auto'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }

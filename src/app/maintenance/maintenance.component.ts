@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-export interface PeriodicElement {
+export interface Features {
   name: string;
   rpgcode: string;
   rmsseg: string;
@@ -9,7 +9,7 @@ export interface PeriodicElement {
   position: number;
 }
 
-let ELEMENT_DATA: PeriodicElement[] = [
+let ELEMENT_DATA: Features[] = [
   {position: 1, name: 'Cozi Elevate Account Package', rpgcode: 'GVC001', rmsseg: 'Blue', edate:'3/10/2020', ldate: '3/15/2020'},
   {position: 2, name: 'Cozi Gold Account Package', rpgcode: 'GVC013', rmsseg: 'Gold', edate:'4/10/2020', ldate: '4/23/2020'},
   {position: 3, name: 'Cozi Platinum Account Package', rpgcode: 'GVC021', rmsseg: 'Silver', edate:'2/10/2020', ldate: '1/20/2020'},

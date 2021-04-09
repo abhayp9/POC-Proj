@@ -3,12 +3,12 @@
       <mat-grid-tile>
         <mat-card class="dashboard-card">
           <mat-card-content class="dashboard-card-content">
-             <div><img class="val" src="./assets/a.JPG" alt="valprop"> </div> <div class="icontext"><h2>Value Proposition </h2></div>
+             <div><img class="val" src="./assets/a.JPG" alt="valprop"> </div> <div class="icontext"><h2>Value Proposition - Cozi Elevate Account Package </h2></div>
              
           </mat-card-content >
           <mat-card-actions align="end">
             
-             <button mat-raised-button > <mat-icon>add</mat-icon>New</button> -->
+             <button mat-raised-button (click)="openFormDialog()" > <mat-icon>add</mat-icon>New</button> -->
           </mat-card-actions>
         </mat-card>
         
@@ -21,18 +21,13 @@
             <mat-card-title>
             </mat-card-title>
           </mat-card-header>
-          <mat-card-content class="form">
+          <!-- <mat-card-content class="form">
             <mat-form-field [formGroup]="form" class="input" hintLabel="Max 10 characters" appearance="fill">
                 <mat-label>RPG Code</mat-label>
                 <input formControlName="rpg" matInput #input maxlength="10" >
                 <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
               </mat-form-field>
             
-              <!-- <mat-form-field  class="input" hintLabel="Max 10 characters" appearance="fill">
-                <mat-label>Active</mat-label>
-                <input matInput #input maxlength="10" >
-                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-              </mat-form-field> -->
                 <mat-checkbox class="check" checked="true">Active</mat-checkbox>
           </mat-card-content>
           <mat-card-content class="form">
@@ -60,7 +55,7 @@
                 <input formControlName="hier" matInput #input maxlength="10" >
                 <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
               </mat-form-field>
-          </mat-card-content>
+          </mat-card-content> -->
           <mat-card-content class="panel">
             <mat-accordion class="example-headers-align" [formGroup]="addinfo">
                 <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
@@ -69,7 +64,7 @@
                         <span class="material-icons">
                             keyboard_arrow_right
                             </span>
-                      Addtional Information
+                      Details
                     </mat-panel-title>
                   </mat-expansion-panel-header>
                   <mat-form-field class="innerform">
@@ -125,6 +120,68 @@
                     <button mat-button color="primary" (click)="nextStep()">Next</button>
                   </mat-action-row>
                 </mat-expansion-panel>
+                <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          <span class="material-icons">
+                              keyboard_arrow_right
+                              </span>
+                        Features
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-form-field class="innerform">
+                      <mat-label>V-Code</mat-label>
+                      <input matInput formControlName="vcode">
+                    </mat-form-field>
+                    <mat-form-field class="innerform">
+                      <mat-label>Rec Type</mat-label>
+                      <input matInput formControlName="rectype">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="innerform">
+                      <mat-label>Code</mat-label>
+                      <input matInput formControlName="code">
+                    </mat-form-field>
+                    <mat-form-field class="innerform">
+                      <mat-label>Group Code
+                      </mat-label>
+                      <input matInput formControlName="groupcode">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="innerform">
+                      <mat-label>Type</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="innerform">
+                      <mat-label>TPS Segment Type</mat-label>
+                      <input matInput formControlName="tps">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="innerform">
+                      <mat-label>RMS Seg Type</mat-label>
+                      <input matInput formControlName="rms">
+                    </mat-form-field>
+                    <mat-form-field class="innerform">
+                      <mat-label>Statement Language Count
+                      </mat-label>
+                      <input matInput formControlName="slc">
+                    </mat-form-field>
+                     <br>
+                    <mat-form-field class="innerform">
+                      <mat-label>BP Type</mat-label>
+                      <input matInput formControlName="bp">
+                    </mat-form-field>
+                    <mat-form-field class="innerform">
+                      <mat-label>
+                          Language Code
+                          </mat-label>
+                      <input matInput formControlName="lc">    
+                    </mat-form-field>
+                
+                    <mat-action-row>
+                      <button mat-button color="primary" (click)="nextStep()">Next</button>
+                    </mat-action-row>
+                  </mat-expansion-panel>
               
                 <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
                   <mat-expansion-panel-header>
