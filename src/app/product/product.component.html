@@ -1,26 +1,37 @@
 <p>
     <mat-form-field appearance="legacy">
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
+        <mat-label>Feature Code</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+  </p>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Feature Family</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let fam of families" [value]="fam.value">
+          {{fam.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  <p>
+    <mat-form-field appearance="legacy">
+        <mat-label>Feature Name</mat-label>
+        <input matInput placeholder="">
       </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="legacy">
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
-      </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="legacy">
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
-      </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="legacy">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
+      <mat-label>Subcategory</mat-label>
+      <input matInput placeholder="">
     </mat-form-field>
   </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Effective Date</mat-label>
+      <input matInput placeholder="">
+    </mat-form-field>
+  </p>
+  
   <button mat-raised-button color="primary">Submit</button>
   <button mat-raised-button color="warn">Cancel</button>

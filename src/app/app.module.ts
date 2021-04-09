@@ -16,14 +16,23 @@ import { MatTableModule } from '@angular/material/table'
 import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { AccountOpenComponent } from './account-open/account-open.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { ValueDetailsComponent } from './value-details/value-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     ProductComponent,
-    MaintenanceComponent
+    MaintenanceComponent,
+    AccountOpenComponent,
+    AccountDetailsComponent,
+    ValueDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,12 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatDialogModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
