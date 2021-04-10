@@ -1,22 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-export interface PeriodicElement {
+import { Router, ActivatedRoute } from '@angular/router';
+export interface Features {
   name: string;
+  rpgcode: string;
+  rmsseg: string;
+  edate: string;
+  ldate: string;
   position: number;
-  weight: number;
-  symbol: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+let ELEMENT_DATA: Features[] = [
+  {position: 1, name: 'Cozi Elevate Account Package', rpgcode: 'GVC001', rmsseg: 'Blue', edate:'3/10/2020', ldate: '3/15/2020'},
+  {position: 2, name: 'Cozi Gold Account Package', rpgcode: 'GVC013', rmsseg: 'Gold', edate:'4/10/2020', ldate: '4/23/2020'},
+  {position: 3, name: 'Cozi Platinum Account Package', rpgcode: 'GVC021', rmsseg: 'Silver', edate:'2/10/2020', ldate: '1/20/2020'},
 ];
 
 @Component({
@@ -26,10 +22,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class MaintenanceComponent implements OnInit {
 
-  constructor() { }
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  constructor(private route: ActivatedRoute, private router: Router) {}
+  displayedColumns: string[] = ['position', 'name', 'rpgcode', 'rmsseg', 'edate', 'ldate'];
   dataSource = ELEMENT_DATA;
   ngOnInit(): void {
   }
-
+  nextPage() {
+    this.router.navigate(['value']);
+    
+  }
+  
 }
