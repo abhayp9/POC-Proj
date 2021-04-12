@@ -23,7 +23,7 @@ let ELEMENT_DATA: Features[] = [
 export class MaintenanceComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) {}
-  displayedColumns: string[] = ['position', 'name', 'rpgcode', 'rmsseg', 'edate', 'ldate'];
+  displayedColumns: string[] = ['name', 'rpgcode', 'rmsseg', 'edate', 'ldate'];
   dataSource = ELEMENT_DATA;
   ngOnInit(): void {
   }
