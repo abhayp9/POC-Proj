@@ -14,7 +14,7 @@ export class AccountOpenComponent implements OnInit {
   ngOnInit(): void {
   }
   nextPage() {
-    this.router.navigate(['accountm']);
+    this.router.navigate(['account']);
     
   }
 }
