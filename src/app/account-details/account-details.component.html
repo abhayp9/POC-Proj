@@ -8,7 +8,7 @@
           </mat-card-content >
           <mat-card-actions align="end">
             
-             <button mat-raised-button (click)="openFormDialog()" > <mat-icon>add</mat-icon>New</button> -->
+             <button mat-raised-button (click)="openFormDialog()" disabled > <mat-icon>add</mat-icon>New</button> -->
           </mat-card-actions>
         </mat-card>
         
@@ -21,41 +21,6 @@
             <mat-card-title>
             </mat-card-title>
           </mat-card-header>
-          <!-- <mat-card-content class="form">
-            <mat-form-field [formGroup]="form" class="input" hintLabel="Max 10 characters" appearance="fill">
-                <mat-label>RPG Code</mat-label>
-                <input formControlName="rpg" matInput #input maxlength="10" >
-                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-              </mat-form-field>
-            
-                <mat-checkbox class="check" checked="true">Active</mat-checkbox>
-          </mat-card-content>
-          <mat-card-content class="form">
-            <mat-form-field [formGroup]="form" class="input" hintLabel="Max 10 characters" appearance="fill">
-                <mat-label>Value Proposition Name</mat-label>
-                <input formControlName="name" matInput #input maxlength="10" >
-                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-              </mat-form-field>
-            
-              <mat-form-field [formGroup]="form" class="input" hintLabel="Max 10 characters" appearance="fill">
-                <mat-label>Effective Date</mat-label>
-                <input formControlName="edate" matInput #input maxlength="10" >
-                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-              </mat-form-field>
-          </mat-card-content>
-          <mat-card-content class="form">
-            <mat-form-field [formGroup]="form" class="input" hintLabel="Max 10 characters" appearance="fill">
-                <mat-label>Short Name</mat-label>
-                <input formControlName="sname" matInput #input maxlength="10" >
-                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-              </mat-form-field>
-            
-              <mat-form-field [formGroup]="form" class="input" hintLabel="Max 10 characters" appearance="fill">
-                <mat-label>Hierarchy</mat-label>
-                <input formControlName="hier" matInput #input maxlength="10" >
-                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-              </mat-form-field>
-          </mat-card-content> -->
           <mat-card-content class="panel">
             <mat-accordion class="example-headers-align" [formGroup]="addinfo">
                 <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
