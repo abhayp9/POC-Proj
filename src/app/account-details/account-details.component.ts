@@ -65,7 +65,6 @@ export class AccountDetailsComponent implements OnInit {
   getData(){
     
       this.data = this.dataSource[0];
-      console.log(this.data);
       this.addinfo.controls['fcode'].patchValue(this.data.fcode);
       this.addinfo.controls['fname'].patchValue(this.data.fname);
       this.addinfo.controls['edate'].patchValue(this.data.date);
