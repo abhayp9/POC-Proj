@@ -15,6 +15,7 @@ export class ValueDetailsComponent implements OnInit {
   displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
   dataSource = this.table.data;
 
+
   form: FormGroup = new FormGroup({
     rpg: new FormControl('Cozi Elevate Account Package'),
     name: new FormControl('GVC001'),
@@ -43,10 +44,39 @@ export class ValueDetailsComponent implements OnInit {
     
   });
   constructor(private dialog: MatDialog,  private table: TableserviceService) { }
-
+  step = 0;
+  down = false;
+  down2 = false;
+  down3 = false;
+  down4 = false;
   ngOnInit(): void {
   }
-  step = 0;
+
+  open(){
+    this.down = true;
+  };
+  closed(){
+    this.down = false;
+  };
+  open2(){
+    this.down2 = true;
+  };
+  closed2(){
+    this.down2 = false;
+  };
+  open3(){
+    this.down3 = true;
+  };
+  closed3(){
+    this.down3 = false;
+  };
+  open4(){
+    this.down4 = true;
+  };
+  closed4(){
+    this.down4 = false;
+  };
+
 
   setStep(index: number) {
     this.step = index;

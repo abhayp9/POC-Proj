@@ -14,6 +14,9 @@ import { ProductComponent  } from '../product/product.component'
   styleUrls: ['./account-details.component.scss']
 })
 export class AccountDetailsComponent implements OnInit {
+  down = false;
+  down2 = false;
+
   displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
   dataSource = this.table.data;
 
@@ -54,7 +57,18 @@ export class AccountDetailsComponent implements OnInit {
   setStep(index: number) {
     this.step = index;
   }
-
+  open(){
+    this.down = true;
+  }
+  closed(){
+    this.down = false;
+  }
+  open2(){
+    this.down2 = true;
+  }
+  closed2(){
+    this.down2 = false;
+  }
   nextStep() {
     this.step++;
   }
@@ -62,6 +76,7 @@ export class AccountDetailsComponent implements OnInit {
   prevStep() {
     this.step--;
   }
+
   openFormDialog() {
     const dialogRef = this.dialog.open(ProductComponent, {
       width: 'auto'
