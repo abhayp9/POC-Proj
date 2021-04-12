@@ -18,6 +18,8 @@ export class DashboardComponent {
   openFormDialog() {
     this.dialog.openFormDialog();
   };
-  
+  clickAlert(){
+    alert('This has not yet been implemented. Try back later!')
+  }
   constructor(private dialog: DialogService) {}
 }
