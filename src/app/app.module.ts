@@ -24,6 +24,9 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { ValueDetailsComponent } from './value-details/value-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +55,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FormsModule, 
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

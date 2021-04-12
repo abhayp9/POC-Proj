@@ -1,59 +1,23 @@
 import { Component } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-import { MaintenanceComponent } from '../maintenance/maintenance.component';
-import { ProductComponent  } from '../product/product.component'  
-import { Router, ActivatedRoute } from '@angular/router';
-import { AccountOpenComponent } from '../account-open/account-open.component';
+import { DialogService } from '../dialog.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
- 
   openTableDialog() {
-    const dialogRef = this.dialog.open(MaintenanceComponent, {
-      width: 'auto'
-    });
-    this.router.events
- .subscribe(() => {
-   dialogRef.close();
- });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+    this.dialog.openTableDialog();
+  };
   openNewDialog() {
-    const dialogRef = this.dialog.open(AccountOpenComponent, {
-      width: 'auto'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+    this.dialog.openNewDialog();
+  };
   openAccountDialog() {
-    const dialogRef = this.dialog.open(MaintenanceComponent, {
-      width: 'auto'
-    });
-    this.router.events
- .subscribe(() => {
-   dialogRef.close();
- });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+    this.dialog.openAccountDialog();
+  };
   openFormDialog() {
-    const dialogRef = this.dialog.open(ProductComponent, {
-      width: 'auto'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router) {}
+    this.dialog.openFormDialog();
+  };
+  
+  constructor(private dialog: DialogService) {}
 }

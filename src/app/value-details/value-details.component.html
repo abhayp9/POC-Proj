@@ -120,7 +120,7 @@
                     <button mat-button color="primary" (click)="nextStep()">Next</button>
                   </mat-action-row>
                 </mat-expansion-panel>
-                <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel  [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                           <span class="material-icons">
@@ -129,7 +129,51 @@
                         Features
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    <mat-form-field class="innerform">
+
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                      <!--- Note that these columns can be defined in any order.
+                            The actual rendered columns are set as a property on the row definition" -->
+                    
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="position"> 
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                      </ng-container>
+                    
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="fcode" >
+                        <th mat-header-cell *matHeaderCellDef> Feature Code </th>
+                        <td mat-cell *matCellDef="let element"> {{element.fcode}} </td>
+                      </ng-container>
+                    
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="ffam">
+                        <th mat-header-cell *matHeaderCellDef> Feature Family </th>
+                        <td mat-cell *matCellDef="let element"> {{element.ffam}} </td>
+                      </ng-container>
+                    
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="fname">
+                        <th mat-header-cell *matHeaderCellDef> Feature Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.fname}} </td>
+                      </ng-container>
+                    
+                      <ng-container matColumnDef="subc">
+                        <th mat-header-cell *matHeaderCellDef> Subcategory </th>
+                        <td mat-cell *matCellDef="let element"> {{element.subc}} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="date">
+                        <th mat-header-cell *matHeaderCellDef> Effective Date </th>
+                        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                      </ng-container>
+                  
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    
+                    
+                    <!-- <mat-form-field class="innerform">
                       <mat-label>V-Code</mat-label>
                       <input matInput formControlName="vcode">
                     </mat-form-field>
@@ -176,14 +220,14 @@
                           Language Code
                           </mat-label>
                       <input matInput formControlName="lc">    
-                    </mat-form-field>
+                    </mat-form-field> -->
                 
                     <mat-action-row>
                       <button mat-button color="primary" (click)="nextStep()">Next</button>
                     </mat-action-row>
                   </mat-expansion-panel>
               
-                <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
                         <span class="material-icons">

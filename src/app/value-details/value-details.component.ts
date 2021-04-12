@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import {TableserviceService } from '../tableservice.service';
 import {
   FormControl,
   FormGroup,
@@ -11,6 +12,9 @@ import { ProductComponent  } from '../product/product.component'
   styleUrls: ['./value-details.component.scss']
 })
 export class ValueDetailsComponent implements OnInit {
+  displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
+  dataSource = this.table.data;
+
   form: FormGroup = new FormGroup({
     rpg: new FormControl('Cozi Elevate Account Package'),
     name: new FormControl('GVC001'),
@@ -38,7 +42,7 @@ export class ValueDetailsComponent implements OnInit {
 
     
   });
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog,  private table: TableserviceService) { }
 
   ngOnInit(): void {
   }

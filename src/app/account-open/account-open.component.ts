@@ -9,12 +9,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class AccountOpenComponent implements OnInit {
 
   constructor( private table: TableserviceService, private router: Router) { }
-  displayedColumns: string[] = ['position', 'fcode', 'ffam', 'fname', 'subc', 'date'];
+  displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
   dataSource = this.table.data;
   ngOnInit(): void {
   }
   nextPage() {
-    this.router.navigate(['accountm']);
+    this.router.navigate(['account']);
     
   }
 }
