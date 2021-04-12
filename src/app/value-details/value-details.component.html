@@ -58,12 +58,15 @@
           </mat-card-content> -->
           <mat-card-content class="panel">
             <mat-accordion class="example-headers-align" [formGroup]="addinfo">
-                <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel  [expanded]="step === 0" (opened)="open(); setStep(0)" (closed)="closed()" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <span class="material-icons">
-                            keyboard_arrow_right
-                            </span>
+                      <span *ngIf="!down" class="material-icons">
+                        keyboard_arrow_right
+                        </span>
+                        <span *ngIf="down" class="material-icons">
+                        keyboard_arrow_down
+                        </span>
                       Details
                     </mat-panel-title>
                   </mat-expansion-panel-header>
@@ -120,12 +123,15 @@
                     <button mat-button color="primary" (click)="nextStep()">Next</button>
                   </mat-action-row>
                 </mat-expansion-panel>
-                <mat-expansion-panel  [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                <mat-expansion-panel  [expanded]="step === 1" (opened)="open2(); setStep(1)" (closed)="closed2()" hideToggle>
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                          <span class="material-icons">
-                              keyboard_arrow_right
-                              </span>
+                        <span *ngIf="!down2" class="material-icons">
+                          keyboard_arrow_right
+                          </span>
+                          <span *ngIf="down2" class="material-icons">
+                          keyboard_arrow_down
+                          </span>
                         Features
                       </mat-panel-title>
                     </mat-expansion-panel-header>
@@ -227,12 +233,15 @@
                     </mat-action-row>
                   </mat-expansion-panel>
               
-                <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+                <mat-expansion-panel [expanded]="step === 2" (opened)="open3(); setStep(2)" (closed)="closed3()" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <span class="material-icons">
-                            keyboard_arrow_right
-                            </span>
+                      <span *ngIf="!down3" class="material-icons">
+                        keyboard_arrow_right
+                        </span>
+                        <span *ngIf="down3" class="material-icons">
+                        keyboard_arrow_down
+                        </span>
                       Description
                     </mat-panel-title>
                   </mat-expansion-panel-header>
@@ -250,12 +259,15 @@
                   </mat-action-row>
                 </mat-expansion-panel>
               
-                <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+                <mat-expansion-panel [expanded]="step === 3" (opened)="open4(); setStep(3)" (closed)="closed4()" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <span class="material-icons">
-                            keyboard_arrow_right
-                            </span>
+                        <span *ngIf="!down4" class="material-icons">
+                          keyboard_arrow_right
+                          </span>
+                          <span *ngIf="down4" class="material-icons">
+                          keyboard_arrow_down
+                          </span>
                       System Admin
                     </mat-panel-title>
                   </mat-expansion-panel-header>

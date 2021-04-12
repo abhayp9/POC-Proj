@@ -23,11 +23,14 @@
           </mat-card-header>
           <mat-card-content class="panel">
             <mat-accordion class="example-headers-align" [formGroup]="addinfo">
-                <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel [expanded]="step === 0" (opened)="open(); setStep(0)" (closed)="closed()" hideToggle>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <span class="material-icons">
+                        <span *ngIf="!down" class="material-icons">
                             keyboard_arrow_right
+                            </span>
+                            <span *ngIf="down" class="material-icons">
+                            keyboard_arrow_down
                             </span>
                       Details
                     </mat-panel-title>
@@ -83,13 +86,16 @@
                     <button mat-button color="primary" (click)="nextStep()">Next</button>
                   </mat-action-row>
                 </mat-expansion-panel>
-                <mat-expansion-panel  [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                <mat-expansion-panel   [expanded]="step === 1" (opened)="open2(); setStep(1)" (closed)="closed2()" hideToggle>
 
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span class="material-icons">
-                                keyboard_arrow_right
-                                </span>
+                          <span *ngIf="!down2" class="material-icons">
+                            keyboard_arrow_right
+                            </span>
+                            <span *ngIf="down2" class="material-icons">
+                            keyboard_arrow_down
+                            </span>
                           System Admin
                         </mat-panel-title>
                       </mat-expansion-panel-header>
