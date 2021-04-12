@@ -16,9 +16,10 @@ import { ProductComponent  } from '../product/product.component'
 export class AccountDetailsComponent implements OnInit {
   down = false;
   down2 = false;
-
+  data;
+  fcode;
   displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
-  dataSource = this.table.data;
+  dataSource = this.table.features;
 
   form: FormGroup = new FormGroup({
     rpg: new FormControl('Cozi Elevate Account Package'),
@@ -28,12 +29,16 @@ export class AccountDetailsComponent implements OnInit {
     hier: new FormControl('Unassigned')
     
   });
+  
+  constructor(private dialog: MatDialog,  private table: TableserviceService) { 
+    this.getData();
+  }
   addinfo: FormGroup = new FormGroup({
-    fcode: new FormControl('001'),
+    fcode: new FormControl(),
     fname: new FormControl('Account Opening'),
     active: new FormControl('YES'),
     fcode2: new FormControl('2'),
-    edate: new FormControl('01/01/2021'),
+    edate: new FormControl(),
     ptype: new FormControl('Blue'),
     ffcode: new FormControl('02'),
     contype: new FormControl('C'),
@@ -47,16 +52,25 @@ export class AccountDetailsComponent implements OnInit {
     
   });
 
-  constructor(private dialog: MatDialog,  private table: TableserviceService) { }
-
   ngOnInit(): void {
     this.addinfo.disable();
+    
   }
+
   step = 0;
 
   setStep(index: number) {
     this.step = index;
   }
+  getData(){
+    
+      this.data = this.dataSource[0];
+      this.addinfo.controls['fcode'].patchValue(this.data.fcode);
+      this.addinfo.controls['fname'].patchValue(this.data.fname);
+      this.addinfo.controls['edate'].patchValue(this.data.date);
+
+    }
+    
   open(){
     this.down = true;
   }

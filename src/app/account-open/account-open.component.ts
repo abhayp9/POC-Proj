@@ -10,7 +10,7 @@ export class AccountOpenComponent implements OnInit {
 
   constructor( private table: TableserviceService, private router: Router) { }
   displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
-  dataSource = this.table.data;
+  dataSource = JSON.parse(localStorage.getItem("allitems"));
   ngOnInit(): void {
   }
   nextPage() {
