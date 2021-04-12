@@ -13,7 +13,7 @@ import { ProductComponent  } from '../product/product.component'
 })
 export class ValueDetailsComponent implements OnInit {
   displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
-  dataSource = this.table.features;
+  tabledata = JSON.parse(localStorage.getItem("allitems"));
 
 
   form: FormGroup = new FormGroup({

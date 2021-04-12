@@ -47,7 +47,7 @@ interface Family {
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
   ]
 })
-export class ProductComponent implements OnInit {;
+export class ProductComponent implements OnInit {
 result;
   form: FormGroup = new FormGroup({
     fcode: new FormControl(),
