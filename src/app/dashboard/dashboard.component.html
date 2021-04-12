@@ -38,7 +38,7 @@
             <img class="val" mat-card-image src="./assets/a.JPG" alt="valprop"> 
             <mat-card-subtitle class="proptext">Value Proposition</mat-card-subtitle>
           </mat-card>
-          <mat-card class="feature">
+          <mat-card class="feature" (click)="clickAlert()">
             <img class="feat" mat-card-image src="./assets/b.JPG" alt="features">
             <mat-card-subtitle class="feattext">Features</mat-card-subtitle>
           </mat-card>
@@ -53,15 +53,15 @@
               <img class="icon1" mat-card-image src="./assets/1.JPG" alt="features">
               <mat-card-subtitle class="icontext">Account Opening</mat-card-subtitle>
             </mat-card>
-            <mat-card class="AO">
+            <mat-card class="AO" (click)="clickAlert()">
               <img class="icon1" mat-card-image src="./assets/2.JPG" alt="features">
               <mat-card-subtitle class="icontext">Account Titling</mat-card-subtitle>
             </mat-card>
-            <mat-card class="AO">
+            <mat-card class="AO" (click)="clickAlert()">
               <img class="icon1" mat-card-image src="./assets/3.JPG" alt="features">
               <mat-card-subtitle class="icontext">Channel Access</mat-card-subtitle>
             </mat-card>
-          <mat-card class="AO">
+          <mat-card class="AO" (click)="clickAlert()">
             <img class="icon1" mat-card-image src="./assets/4.JPG" alt="features">
             <mat-card-subtitle class="icontext">Communications</mat-card-subtitle>
           </mat-card>
