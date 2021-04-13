@@ -18,7 +18,7 @@ export const MY_FORMATS = {
     dateInput: 'LL',
   },
   display: {
-    dateInput: 'YYYY-MM-DD',
+    dateInput: 'MM/DD/YYYY',
     monthYearLabel: 'YYYY',
     dateA11yLabel: 'LL',
     monthYearA11yLabel: 'YYYY',
@@ -45,10 +45,12 @@ interface Family {
     },
 
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}
   ]
 })
 export class ProductComponent implements OnInit {
 result;
+dateValue;
   form: FormGroup = new FormGroup({
     fcode: new FormControl(),
     ffam: new FormControl(),
@@ -64,12 +66,19 @@ result;
     {value: 'Channel Access', viewValue: 'Channel Access'},
     {value: 'Communications', viewValue: 'Communications'},
   ];
-  constructor(private table: TableserviceService, private dialog: DialogService) { }
+  constructor( private table: TableserviceService, private dialog: DialogService, private dateAdapter: DateAdapter<Date>) {
+    this.dateAdapter.setLocale('en-US');
+    
+   }
 
   ngOnInit(): void {
   }
   submit(){
+  let formattedDate = this.form.value.date.format('MM/DD/YYYY');
+  this.form.value.date = formattedDate;
+  console.log(this.form.value.date);
   this.table.adddata(this.form.value);
+
   this.dialog.closeDialog();
   }
   close(){
