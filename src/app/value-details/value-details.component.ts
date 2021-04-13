@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {TableserviceService } from '../tableservice.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import {
   FormControl,
   FormGroup,
@@ -40,7 +41,7 @@ export class ValueDetailsComponent implements OnInit {
     create: new FormControl('Jane Doe, 3/31/2021, 12:05 PM')
 
   });
-  constructor(private dialog: MatDialog,  private table: TableserviceService) { }
+  constructor(private router: Router, private dialog: MatDialog,  private table: TableserviceService) { }
   step = 0;
   down = false;
   down2 = false;
@@ -85,6 +86,9 @@ export class ValueDetailsComponent implements OnInit {
 
   prevStep() {
     this.step--;
+  }
+  goHome(){
+    this.router.navigate(['/']);
   }
   openFormDialog() {
     const dialogRef = this.dialog.open(ProductComponent, {
