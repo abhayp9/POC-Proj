@@ -6,9 +6,9 @@
              <div><img class="val" src="./assets/a.JPG" alt="valprop"> </div> <div class="icontext"><h2>Feature - {{ this.data.fname }} </h2></div>
              
           </mat-card-content >
-          <mat-card-actions align="end">
+          <mat-card-actions class="top-nav" align="end">
             
-             <button mat-raised-button (click)="openFormDialog()" disabled > <mat-icon>add</mat-icon>New</button> -->
+             <button mat-raised-button  (click)="openFormDialog()" disabled > <mat-icon>add</mat-icon>New</button> -->
           </mat-card-actions>
         </mat-card>
         
@@ -121,6 +121,9 @@
               
               </mat-accordion>
           </mat-card-content>
+          <mat-card-actions class="bottom-nav" align="end">
+            <button mat-raised-button class="home-button" (click)="goHome()" > <mat-icon class="back-icon">keyboard_backspace</mat-icon>Back</button>
+            </mat-card-actions>
         </mat-card>
       </mat-grid-tile>
       </mat-grid-list>

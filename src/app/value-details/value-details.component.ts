@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {TableserviceService } from '../tableservice.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import {
   FormControl,
   FormGroup,
@@ -13,7 +14,7 @@ import { ProductComponent  } from '../product/product.component'
 })
 export class ValueDetailsComponent implements OnInit {
   displayedColumns: string[] = ['fcode', 'ffam', 'fname', 'subc', 'date'];
-  tabledata = JSON.parse(localStorage.getItem("allitems"));
+  tabledata = this.table.currentitems;
 
 
   form: FormGroup = new FormGroup({
@@ -39,11 +40,8 @@ export class ValueDetailsComponent implements OnInit {
     modify: new FormControl('Jane Doe, 3/31/2021, 12:05 PM'),
     create: new FormControl('Jane Doe, 3/31/2021, 12:05 PM')
 
-
-
-    
   });
-  constructor(private dialog: MatDialog,  private table: TableserviceService) { }
+  constructor(private router: Router, private dialog: MatDialog,  private table: TableserviceService) { }
   step = 0;
   down = false;
   down2 = false;
@@ -89,6 +87,9 @@ export class ValueDetailsComponent implements OnInit {
   prevStep() {
     this.step--;
   }
+  goHome(){
+    this.router.navigate(['/']);
+  }
   openFormDialog() {
     const dialogRef = this.dialog.open(ProductComponent, {
       width: 'auto'
@@ -96,6 +97,7 @@ export class ValueDetailsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      this.tabledata = JSON.parse(localStorage.getItem("allitems"));
     });
   }
 }

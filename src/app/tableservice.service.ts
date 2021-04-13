@@ -16,7 +16,8 @@ let features: Features[] = [
   providedIn: 'root'
 })
 export class TableserviceService {  
-  items = localStorage.setItem("allitems", JSON.stringify(features))
+  items = localStorage.setItem("allitems", JSON.stringify(features));
+  currentitems = JSON.parse(localStorage.getItem("allitems"));
   newitems;
   features = features;
   constructor(){
@@ -31,5 +32,10 @@ export class TableserviceService {
     allitems.push(idata);
     console.log(allitems);
     localStorage.setItem("allitems", JSON.stringify(allitems));
+    this.currentitems = JSON.parse(localStorage.getItem("allitems"));
+  }
+  
+  getData(){
+
   }
 }
